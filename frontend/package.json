@@ -1,0 +1,47 @@
+{
+  "name": "SLIMGULAR",
+  "version": "0.0.1",
+  "description": "",
+  "main": "bootstrap.js",
+  "scripts": {
+    "build": "webpack -p",
+    "watch": "webpack -w"
+  },
+  "author": "seven",
+  "dependencies": {
+    "angular": "^1.5.9",
+    "angular-block-ui": "^0.2.2",
+    "angular-cookies": "^1.5.9",
+    "angular-i18n": "^1.5.9",
+    "angular-ui-bootstrap": "^2.3.0",
+    "angular-ui-router": "^0.3.2",
+    "bootstrap": "^3.3.7",
+    "jquery": "^2.2.4",
+    "jwt-decode": "^2.1.0",
+    "lodash": "^4.17.2",
+    "moment": "^2.17.1",
+    "ng-file-upload": "^12.2.13",
+    "ng-table": "^3.0.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.4",
+    "html-loader": "^0.4.5",
+    "html-webpack-plugin": "^1.7.0",
+    "postcss-loader": "^0.9.1",
+    "precss": "^1.4.0",
+    "script-loader": "^0.6.1",
+    "stacktrace-js": "^0.6.4",
+    "standard": "^7.1.2",
+    "standard-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.12.9"
+  },
+  "standard": {
+    "ignore": [
+      "**/dist/**",
+      "**/bundle*.js"
+    ]
+  }
+}

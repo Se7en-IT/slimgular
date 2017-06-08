@@ -1,0 +1,14 @@
+{
+    "require": {
+        "slim/slim": "3.*",
+        "monolog/monolog": "1.*",
+        "tuupola/slim-jwt-auth": "2.*",
+        "illuminate/database": "^5.4",
+        "vlucas/phpdotenv": "^2.4"
+    },
+    "autoload" : {
+     "classmap": [
+       "app/service"
+     ]
+   }
+}

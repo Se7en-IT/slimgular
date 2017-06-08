@@ -1,0 +1,29 @@
+<div class="container">
+	<div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+		<div class="panel panel-success" >
+			<div class="panel-heading">
+				<div class="panel-title">Login</div>
+			</div>
+			<div style="padding-top:30px" class="panel-body" >
+				<div class="alert alert-danger" ng-if="$ctrl.errore">
+					{{$ctrl.errore}}
+		    </div>
+				<form id="form" name="form" class="form-horizontal" ng-submit="$ctrl.invia()">
+					<div style="margin-bottom: 25px" class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+						<input id="login-username" type="text" class="form-control" ng-model="$ctrl.data.email" name="username" value="" placeholder="email">
+					</div>
+					<div style="margin-bottom: 25px" class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+						<input id="login-password" type="password" class="form-control" ng-model="$ctrl.data.password" name="password" placeholder="password">
+					</div>
+					<div style="margin-top:10px" class="form-group">
+						<div class="col-sm-12 controls">
+							<input type="submit" class="btn btn-success">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

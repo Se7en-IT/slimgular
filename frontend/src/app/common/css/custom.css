@@ -1,0 +1,85 @@
+$verdeChiaro:#449d44;
+$verdeScuro:#398439;
+$bianco:#ffffff;
+$grigio:#cccccc;
+$rosso:#d9534f;
+input.ng-invalid{
+  border-color: $rosso;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+.navbar{
+  margin-bottom:0;
+  border-radius:0;
+}
+.navbar-bot{
+  background-color: $grigio;
+  min-height:auto;
+}
+.u-mrg-bot{
+  margin-bottom:20px;
+}
+.u-mrg-top{
+  margin-top:20px;
+}
+div.logo img{
+  max-height:100px;
+}
+.navbar-default {
+  background-color: $verdeChiaro;
+  border-color: $verdeScuro;
+  .navbar-brand {
+    color: $bianco;
+    &:hover, &:focus {
+      color: $bianco; }}
+  .navbar-text {
+    color: $bianco; }
+  .navbar-nav {
+    > li {
+      > a {
+        color: $bianco;
+        &:hover,  &:focus {
+          color: $bianco;
+        }
+      }
+    }
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $bianco;
+        background-color: $verdeScuro;
+      }
+    }
+    > .open {
+      > a, > a:hover, > a:focus {
+        color: $bianco;
+        background-color: $verdeScuro;
+      }
+    }
+  }
+  .navbar-toggle {
+    border-color: $verdeScuro;
+    &:hover, &:focus {
+      background-color: $verdeScuro; }
+    .icon-bar {
+      background-color: $bianco; }}
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $bianco; }
+  .navbar-link {
+    color: $bianco;
+    &:hover {
+      color: $bianco;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    > li > a {
+      color: $bianco;
+      &:hover, &:focus {
+        color: $bianco; }}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $bianco;
+        background-color: $verdeScuro; }}}
+}
