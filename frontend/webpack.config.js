@@ -1,4 +1,5 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var Dotenv = require('dotenv-webpack')
 module.exports = {
   entry: './bootstrap.js',
   output: {
@@ -39,6 +40,7 @@ module.exports = {
   },
   devtool: 'source-map',
   plugins: [
+    new Dotenv(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/app.html',

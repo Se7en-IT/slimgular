@@ -6,10 +6,15 @@ $app->post("/login", function ($request, $response)  {
 	if (!$user) {
 		throw new Exception("Username o password errati");
 	}
-	#TODO cookie
-	return $response->withJson([
-		"token" => $this->jwt->encode([
-			"user" => 1
-		])
+	$token = $this->jwt->encode([
+		"user" => 1
 	]);
+	setcookie("token", $token, 0, "/");
+	return $response->withJson([
+		"token" => $token
+	]);
+});
+
+$app->get("/logout", function ($request, $response)  {
+	setcookie("token", "", time() - 3600, "/");
 });

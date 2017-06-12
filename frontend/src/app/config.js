@@ -14,6 +14,6 @@ angular.module('app', [
 ])
   .config(['BackendServiceProvider', '$urlRouterProvider',
     function (BackendServiceProvider, $urlRouterProvider) {
-      BackendServiceProvider.urlApi = 'backend/index.php/'
+      BackendServiceProvider.urlApi = process.env.URL_API
       $urlRouterProvider.otherwise('/login')
     }])
