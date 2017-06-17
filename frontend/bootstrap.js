@@ -4,7 +4,6 @@ require('./node_modules/angular-block-ui/dist/angular-block-ui.css')
 require('./node_modules/ng-table/bundles/ng-table.css')
 
 // js
-require('script!jquery')
 require('./node_modules/bootstrap/dist/js/bootstrap.js')
 
 // app files

@@ -1,50 +1,63 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var Dotenv = require('dotenv-webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
+const path = require('path')
+const webpack = require('webpack')
 module.exports = {
   entry: './bootstrap.js',
   output: {
-    path: '../',
-    publicPath: '',
+    path: path.resolve(__dirname, '..'),
     filename: 'bundle.js'
   },
   module: {
-    preLoaders: [{
-      test: /\.js$/,
-      exclude: /node_modules|vendor/,
-      loader: 'standard'
-    }],
-    loaders: [
+    rules: [
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules|vendor/,
+        loader: 'standard-loader'
+      },
       {
         test: /\.html$/,
-        loader: 'html'
+        loader: 'html-loader'
       },
       {
         test: /\.css$/,
-        loaders: [
-          'style',
-          'css',
-          'postcss'
-        ]
+        use: [{
+          loader: 'style-loader'
+        }, {
+          loader: 'css-loader',
+          options: { importLoaders: 1 }
+        }, {
+          loader: 'postcss-loader',
+          options: {
+            plugins: function () {
+              return [
+                require('precss')
+              ]
+            }
+          }
+        }]
       },
       {
         test: /\.(ttf|eot|svg|png|jpg|gif|woff(2)?)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'url',
-        query: {
+        loader: 'url-loader',
+        options: {
           limit: 10000
         }
       }
     ]
   },
-  postcss: function () {
-    return [require('precss')]
-  },
   devtool: 'source-map',
   plugins: [
     new Dotenv(),
+    new webpack.ProvidePlugin({
+      'window.jQuery': 'jquery',
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/app.html',
-      inject: true,
       hash: true
     })
   ]
