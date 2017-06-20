@@ -1,5 +1,1 @@
-*
-!.gitignore
-!README.md
-!backend/*
-!frontend/*
+.DS_Store
