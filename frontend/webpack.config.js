@@ -57,8 +57,13 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './src/app.html',
+      template: './src/index.html',
       hash: true
     })
-  ]
+  ],
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
+  }
 }

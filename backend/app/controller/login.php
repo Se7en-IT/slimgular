@@ -7,7 +7,8 @@ $app->post("/login", function ($request, $response)  {
 		throw new Exception("Username o password errati");
 	}
 	$token = $this->jwt->encode([
-		"user" => 1
+		"user" => 1,
+		"email" => "luca.musolino@gmail.com"
 	]);
 	setcookie("token", $token, 0, "/");
 	return $response->withJson([

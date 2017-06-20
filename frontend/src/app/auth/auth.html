@@ -1,29 +1,28 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_collapse" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#!/auth/home">HOME</a>
-    </div>
+<div>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#/auth/home">HOME</a>
+      </div>
 
-    <div class="collapse navbar-collapse" id="nav_collapse">
-      <ul class="nav navbar-nav">
-        <li>
-            <a href="#!/auth/home"><span class="glyphicon glyphicon-home"></span></a>
-        </li>
-        <li>
-            <a href="#!/auth/home"><span class="glyphicon glyphicon-book"></span> Menu</a>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-  			<li><a href="javascript:;"><span class="glyphicon glyphicon-user"> {{$ctrl.user.data.user_email}}</a></li>
-        <li><a href="javascript:;" ng-click="$ctrl.logout()"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
-  		</ul>
+      <div class="collapse navbar-collapse" id="nav_collapse">
+        <ul class="nav navbar-nav">
+          <li>
+              <a href="#/auth/home"><span class="glyphicon glyphicon-book"></span> Menu</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+    			<li><a href="javascript:;"><span class="glyphicon glyphicon-user"></span> {{user.email}}</a></li>
+          <li><a href="javascript:;" @click="logout()"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+    		</ul>
+      </div>
     </div>
-  </div>
-</nav>
-<ui-view></ui-view>
+  </nav>
+  <router-view></router-view>
+</div>

@@ -1,8 +1,4 @@
-var angular = require('angular')
-angular.module('app')
-  .component('home', {
-    'template': require('./home.html'),
-    'controller': [function () {
-
-    }]
-  })
+import Vue from 'vue'
+Vue.component('home', {
+  'template': require('./home.html')
+})

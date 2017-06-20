@@ -9,20 +9,14 @@
   },
   "author": "seven",
   "dependencies": {
-    "angular": "^1.5.9",
-    "angular-block-ui": "^0.2.2",
-    "angular-cookies": "^1.5.9",
-    "angular-i18n": "^1.5.9",
-    "angular-ui-bootstrap": "^2.3.0",
-    "angular-ui-router": "^0.3.2",
-    "angular-ui-validate": "^1.2.3",
     "bootstrap": "^3.3.7",
-    "jquery": "^2.2.4",
-    "jwt-decode": "^2.1.0",
-    "lodash": "^4.17.2",
-    "moment": "^2.17.1",
-    "ng-file-upload": "^12.2.13",
-    "ng-table": "^3.0.1"
+    "js-cookie": "^2.1.4",
+    "jwt-decode": "^2.2.0",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "vue": "^2.3.4",
+    "vue-resource": "^1.3.4",
+    "vue-router": "^2.6.0"
   },
   "devDependencies": {
     "css-loader": "^0.28.4",

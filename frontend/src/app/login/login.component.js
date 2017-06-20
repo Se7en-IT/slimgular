@@ -1,15 +1,20 @@
-var angular = require('angular')
-angular.module('app')
-  .component('login', {
-    'template': require('./login.html'),
-    'controller': ['BackendService', '$state', function (BackendService, $state) {
-      var $ctrl = this
-      this.invia = function () {
-        BackendService.post('login', this.data).then(function () {
-          $state.go('auth.home')
-        }, function (result) {
-          $ctrl.errore = result.data.data
-        })
-      }
-    }]
-  })
+import Vue from 'vue'
+Vue.component('login', {
+  'template': require('./login.html'),
+  'data': function () {
+    return {
+      errore: '',
+      data: {}
+    }
+  },
+  'methods': {
+    invia: function () {
+      var vm = this
+      Vue.http.post('login', this.data).then(function () {
+        vm.$router.push('auth/home')
+      }, function (result) {
+        vm.errore = result.data.data
+      })
+    }
+  }
+})
