@@ -1,5 +1,4 @@
-import Cookies from 'js-cookie'
-import jwtDecode from 'jwt-decode'
+import Vue from 'vue'
 
 export default {
   'template': require('./auth.html'),
@@ -9,10 +8,10 @@ export default {
     }
   },
   beforeRouteEnter: function (to, from, next) {
-    var token = Cookies.get('token')
+    var token = Vue.$auth.getUser()
     if (token) {
       next(function (vm) {
-        vm.user = jwtDecode(token)
+        vm.user = token
       })
     } else {
       next(false)

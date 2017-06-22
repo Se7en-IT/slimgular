@@ -1,13 +1,15 @@
 // CSS
 import 'bootstrap/dist/css/bootstrap.css'
 import 'animate.css'
-import './app/common/css/custom.css'
+import './css/custom.css'
 // JS
 import Vue from 'vue'
 import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
+import VueAuth from './plugin/auth.js'
 import routes from './routes'
 
+Vue.use(VueAuth)
 Vue.use(VueRouter)
 Vue.use(VueResource)
 

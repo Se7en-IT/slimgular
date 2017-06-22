@@ -1,6 +1,6 @@
-import Login from './app/login/login.component.js'
-import Auth from './app/auth/auth.component.js'
-import Home from './app/auth/home/home.component.js'
+import Login from './component/login/login.component.js'
+import Auth from './component/auth/auth.component.js'
+import Home from './component/auth/home/home.component.js'
 
 export default {
   routes: [{
