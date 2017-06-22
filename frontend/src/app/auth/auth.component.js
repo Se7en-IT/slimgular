@@ -1,8 +1,7 @@
-import Vue from 'vue'
 import Cookies from 'js-cookie'
 import jwtDecode from 'jwt-decode'
 
-Vue.component('auth', {
+export default {
   'template': require('./auth.html'),
   'data': function () {
     return {
@@ -21,10 +20,9 @@ Vue.component('auth', {
   },
   'methods': {
     logout: function () {
-      var vm = this
-      Vue.http.get('logout').then(function () {
-        vm.$router.push('/')
+      this.$http.get('logout').then(function () {
+        this.$router.push('/')
       })
     }
   }
-})
+}

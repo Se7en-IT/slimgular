@@ -3,7 +3,7 @@ const Dotenv = require('dotenv-webpack')
 const path = require('path')
 const webpack = require('webpack')
 module.exports = {
-  entry: './bootstrap.js',
+  entry: './src/config.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'

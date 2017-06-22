@@ -9,6 +9,7 @@
   },
   "author": "seven",
   "dependencies": {
+    "animate.css": "^3.5.2",
     "bootstrap": "^3.3.7",
     "js-cookie": "^2.1.4",
     "jwt-decode": "^2.2.0",

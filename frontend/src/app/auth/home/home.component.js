@@ -1,4 +1,3 @@
-import Vue from 'vue'
-Vue.component('home', {
+export default {
   'template': require('./home.html')
-})
+}

@@ -1,5 +1,4 @@
-import Vue from 'vue'
-Vue.component('login', {
+export default {
   'template': require('./login.html'),
   'data': function () {
     return {
@@ -9,12 +8,11 @@ Vue.component('login', {
   },
   'methods': {
     invia: function () {
-      var vm = this
-      Vue.http.post('login', this.data).then(function () {
-        vm.$router.push('auth/home')
+      this.$http.post('login', this.data).then(function () {
+        this.$router.push('auth/home')
       }, function (result) {
-        vm.errore = result.data.data
+        this.errore = result.data.data
       })
     }
   }
-})
+}
