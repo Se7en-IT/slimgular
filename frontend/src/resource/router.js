@@ -21,8 +21,7 @@ const router = new VueRouter({
   }]
 })
 router.beforeEach(function (to, from, next) {
-  var token = auth.getUser()
-  if (to.matched.some(function (record) { return record.meta.auth }) && !token) {
+  if (to.matched.some(function (record) { return record.meta.auth }) && !auth.getUser()) {
     next(false)
   } else {
     next()

@@ -11,7 +11,6 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "bootstrap": "^3.3.7",
-    "js-cookie": "^2.1.4",
     "jwt-decode": "^2.2.0",
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
@@ -28,6 +27,7 @@
     "sass-loader": "^6.0.6",
     "standard": "^10.0.2",
     "standard-loader": "^6.0.1",
+    "store2": "^2.5.1",
     "url-loader": "^0.5.9",
     "vue-loader": "^12.2.1",
     "vue-template-compiler": "^2.3.4",

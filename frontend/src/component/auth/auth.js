@@ -9,6 +9,7 @@ export default {
   'methods': {
     logout: function () {
       this.$http.get('logout').then(function () {
+        auth.removeToken()
         this.$router.push('/')
       })
     }
