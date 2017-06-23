@@ -7,7 +7,7 @@ Vue.http.options.root = process.env.URL_API
 Vue.http.interceptors.push(function (request, next) {
   var token = auth.getToken()
   if (token) {
-    request.headers.set('X-Token', token)
+    request.headers.set(process.env.TOKEN_NAME, token)
   }
   next()
 })

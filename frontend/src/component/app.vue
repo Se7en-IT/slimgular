@@ -10,6 +10,9 @@
   @import '../../node_modules/bootstrap/dist/css/bootstrap.css';
   @import '../../node_modules/animate.css';
   @import '../css/color.scss';
+  .animated{
+    animation-duration:0.5s;
+  }
   .u-mrg-bot {
     margin-bottom: 20px;
   }
