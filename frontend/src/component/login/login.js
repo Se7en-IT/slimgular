@@ -1,5 +1,4 @@
 export default {
-  'template': require('./login.html'),
   'data': function () {
     return {
       errore: '',

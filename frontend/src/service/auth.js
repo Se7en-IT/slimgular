@@ -11,7 +11,4 @@ service.getUser = function () {
   }
   return token
 }
-
-export default function (Vue) {
-  Vue.$auth = Vue.prototype.$auth = service
-}
+export default service

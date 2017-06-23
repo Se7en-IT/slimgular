@@ -1,0 +1,111 @@
+@import '../../css/color.scss';
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.navbar-bot {
+  background-color: $grigio;
+  min-height: auto;
+}
+
+div.logo img {
+  max-height: 100px;
+}
+
+.navbar-default {
+  background-color: $verdeChiaro;
+  border-color: $verdeScuro;
+
+  .navbar-brand {
+    color: $bianco;
+
+    &:focus,
+    &:hover {
+      color: $bianco;
+    }
+  }
+
+  .navbar-text {
+    color: $bianco;
+  }
+
+  .navbar-nav {
+    > li {
+      > a {
+        color: $bianco;
+
+        &:focus,
+        &:hover {
+          color: $bianco;
+        }
+      }
+    }
+
+    > .active {
+       > a:focus,
+       > a:hover,
+      > a {
+        color: $bianco;
+        background-color: $verdeScuro;
+      }
+    }
+
+    > .open {
+       > a:focus,
+       > a:hover,
+      > a {
+        color: $bianco;
+        background-color: $verdeScuro;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    border-color: $verdeScuro;
+
+    &:focus,
+    &:hover {
+      background-color: $verdeScuro;
+    }
+
+    .icon-bar {
+      background-color: $bianco;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $bianco;
+  }
+
+  .navbar-link {
+    color: $bianco;
+
+    &:hover {
+      color: $bianco;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    > li > a {
+      color: $bianco;
+
+      &:focus,
+      &:hover {
+        color: $bianco;
+      }
+    }
+
+    > .active {
+       > a:focus,
+       > a:hover,
+      > a {
+        color: $bianco;
+        background-color: $verdeScuro;
+      }
+    }
+  }
+}
