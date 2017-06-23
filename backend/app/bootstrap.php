@@ -23,8 +23,20 @@ $app->add(new \Slim\Middleware\JwtAuthentication([
       $container["token"] = $arguments["decoded"];
   }
 ]));
+/*CROSS ORIGIN*/
+$app->add(function ($req, $res, $next) {
+    $response = $next($req, $res);
+    return $response
+            ->withHeader('Access-Control-Allow-Origin', '*')
+            ->withHeader('Access-Control-Allow-Headers', 'X-Token, Content-Type, Accept, Origin, Authorization')
+            ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+});
+$app->options('/{routes:.+}', function ($request, $response, $args) {
+    return $response;
+});
 /*SETUP CONTROLLER*/
 foreach (glob(APPROOT . '/controller/*.php') as $router) {
   include $router;
 }
+
 return $app;
